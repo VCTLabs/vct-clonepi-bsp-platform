@@ -14,11 +14,13 @@ DISTRO = "vctlabs" in your local.conf if you want the mainline kernel to be the 
 machine variants
 ----------------
 
-Current machine variants on gatesgarth branch:
+Current machine variants on hardknott branch:
 
 * select orangepi, nanopi, bananapi devices
 * various a20 - a50 Allwinner-based devices
-* see meta-sunxi/conf/machine for default MACHINE names
+* see `meta-sunxi/conf/machine`_ for default MACHINE names
+
+.. _meta-sunxi/conf/machine: https://github.com/linux-sunxi/meta-sunxi/tree/master/conf/machine
 
 
 Build branches
@@ -60,11 +62,11 @@ Download the BSP source
   $ PATH=${PATH}:~/bin
   $ mkdir clonepi-bsp
   $ cd clonepi-bsp
-  $ repo init -u https://github.com/VCTLabs/vct-clonepi-bsp-platform -b oe-gatesgarth
+  $ repo init -u https://github.com/VCTLabs/vct-clonepi-bsp-platform -b oe-hardknott
   $ repo sync
 
 At the end of the above commands you have all the metadata you need to start
-building with poky and meta-oe on gatesgarth branches.
+building with poky and meta-oe on hardknott branches.
 
 To start a simple image build for a specific target::
 
@@ -90,6 +92,7 @@ Source code
 Download the manifest source here::
 
   $ git clone https://github.com/VCTLabs/vct-clonepi-bsp-platform
+
 
 Using Development and Testing/Release Branches
 ----------------------------------------------
