@@ -18,7 +18,9 @@ Current machine variants on dunfell branch:
 
 * select orangepi, nanopi, bananapi devices
 * various a20 - a50 Allwinner-based devices
-* see meta-sunxi/conf/machine for default MACHINE names
+* see `meta-sunxi/conf/machine`_ for default MACHINE names
+
+.. _meta-sunxi/conf/machine: https://github.com/linux-sunxi/meta-sunxi/tree/master/conf/machine
 
 
 Build branches
@@ -100,7 +102,7 @@ For developers - gatesgarth
 
 ::
 
-  $ repo init -u https://github.com/VCTLabs/vct-beagleboard-bsp-platform -b oe-gatesgarth
+  $ repo init -u https://github.com/VCTLabs/vct-clonepi-bsp-platform -b oe-gatesgarth
 
 For intrepid developers and testers - master
 
@@ -111,6 +113,6 @@ breaks something that was working before.  Use with caution.
 
 ::
 
-  $ repo init -u https://github.com/VCTLabs/vct-beagleboard-bsp-platform -b oe-master
+  $ repo init -u https://github.com/VCTLabs/vct-clonepi-bsp-platform -b oe-master
 
 
