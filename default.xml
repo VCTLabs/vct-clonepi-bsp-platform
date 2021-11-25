@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <default sync-j="4" revision="oe-gatesgarth"/>
+
+  <remote fetch="https://github.com/openembedded" name="oe-core"/>
+  <remote fetch="https://github.com/linux-sunxi" name="meta-sunxi"/>
+  <remote fetch="https://github.com/sarnold" name="sla"/>
+  <remote fetch="https://github.com/VCTLabs" name="vct"/>
+
+  <project remote="oe-core" revision="gatesgarth" name="openembedded-core" path="oe-core"/>
+  <project remote="oe-core" revision="gatesgarth" name="meta-openembedded" path="oe-core/meta-openembedded"/>
+  <project remote="oe-core" revision="1.48" name="bitbake" path="oe-core/bitbake"/>
+
+  <project remote="meta-sunxi" revision="gatesgarth" name="meta-sunxi" path="oe-core/meta-sunxi"/>
+  <project remote="sla" revision="gatesgarth" name="meta-small-arm-extra" path="oe-core/meta-small-arm-extra"/>
+
+</manifest>
+

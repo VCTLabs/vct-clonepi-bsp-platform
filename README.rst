@@ -14,7 +14,7 @@ DISTRO = "vctlabs" in your local.conf if you want the mainline kernel to be the 
 machine variants
 ----------------
 
-Current machine variants on dunfell branch:
+Current machine variants on gatesgarth branch:
 
 * select orangepi, nanopi, bananapi devices
 * various a20 - a50 Allwinner-based devices
@@ -60,11 +60,11 @@ Download the BSP source
   $ PATH=${PATH}:~/bin
   $ mkdir clonepi-bsp
   $ cd clonepi-bsp
-  $ repo init -u https://github.com/VCTLabs/vct-clonepi-bsp-platform -b oe-dunfell
+  $ repo init -u https://github.com/VCTLabs/vct-clonepi-bsp-platform -b oe-gatesgarth
   $ repo sync
 
 At the end of the above commands you have all the metadata you need to start
-building with poky and meta-oe on dunfell branches.
+building with poky and meta-oe on gatesgarth branches.
 
 To start a simple image build for a specific target::
 
@@ -96,11 +96,11 @@ Using Development and Testing/Release Branches
 
 Replace the repo init command above with one of the following:
 
-For developers - gatesgarth
+For developers - hardknott
 
 ::
 
-  $ repo init -u https://github.com/VCTLabs/vct-beagleboard-bsp-platform -b oe-gatesgarth
+  $ repo init -u https://github.com/VCTLabs/vct-clonepi-bsp-platform -b oe-hardknott
 
 For intrepid developers and testers - master
 
@@ -111,6 +111,6 @@ breaks something that was working before.  Use with caution.
 
 ::
 
-  $ repo init -u https://github.com/VCTLabs/vct-beagleboard-bsp-platform -b oe-master
+  $ repo init -u https://github.com/VCTLabs/vct-clonepi-bsp-platform -b oe-master
 
 
