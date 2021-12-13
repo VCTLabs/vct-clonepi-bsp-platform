@@ -98,11 +98,11 @@ Using Development and Testing/Release Branches
 
 Replace the repo init command above with one of the following:
 
-For developers - gatesgarth
+For developers - hardknott
 
 ::
 
-  $ repo init -u https://github.com/VCTLabs/vct-clonepi-bsp-platform -b oe-gatesgarth
+  $ repo init -u https://github.com/VCTLabs/vct-clonepi-bsp-platform -b oe-hardknott
 
 For intrepid developers and testers - master
 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <default sync-j="4" revision="oe-dunfell"/>
+
+  <remote fetch="https://github.com/openembedded" name="oe-core"/>
+  <remote fetch="https://github.com/linux-sunxi" name="meta-sunxi"/>
+  <remote fetch="https://github.com/sarnold" name="sla"/>
+  <remote fetch="https://github.com/VCTLabs" name="vct"/>
+
+  <project remote="oe-core" revision="dunfell" name="openembedded-core" path="oe-core"/>
+  <project remote="oe-core" revision="dunfell" name="meta-openembedded" path="oe-core/meta-openembedded"/>
+  <project remote="oe-core" revision="1.46" name="bitbake" path="oe-core/bitbake"/>
+
+  <project remote="meta-sunxi" revision="dunfell" name="meta-sunxi" path="oe-core/meta-sunxi"/>
+  <project remote="sla" revision="dunfell" name="meta-small-arm-extra" path="oe-core/meta-small-arm-extra"/>
+
+</manifest>
+
