@@ -54,8 +54,8 @@ Install the repo utility
   $ curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
   $ chmod a+x ~/bin/repo
 
-Download the BSP source
------------------------
+Create the BSP workspace
+------------------------
 
 ::
 
@@ -67,6 +67,39 @@ Download the BSP source
 
 At the end of the above commands you have all the metadata you need to start
 building with poky and meta-oe on dunfell branches.
+
+Update existing workspace
+-------------------------
+
+In order to bring all the repositories up to date with upstream::
+
+  $ cd clonepi-bsp
+  $ repo sync
+
+If you have local changes, you might also need::
+
+  $ repo rebase
+
+Repo tips
+---------
+
+Some info on how to customize your sync:
+
+  ``-j JOBS, --jobs=JOBS``  projects to fetch simultaneously (default 4)
+  ``--no-clone-bundle``     disable use of /clone.bundle on HTTP/HTTPS
+  ``--no-tags``             don't fetch tags
+
+Fastest full sync::
+
+  $ repo sync --no-tags --no-clone-bundle
+
+Smallest/fastest sync::
+
+  $ repo init -u https://github.com/VCTLabs/vct-clonepi-bsp-platform -b oe-dunfell --no-clone-bundle --depth=1
+  $ repo sync --no-tags --no-clone-bundle --current-branch
+
+Configure and build
+-------------------
 
 To start a simple image build for a specific target::
 
