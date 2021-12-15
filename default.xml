@@ -10,7 +10,7 @@
 
   <project remote="oe-core" revision="hardknott" name="openembedded-core" path="oe-core"/>
   <project remote="oe-core" revision="hardknott" name="meta-openembedded" path="oe-core/meta-openembedded"/>
-  <project remote="oe-core" revision="1.48" name="bitbake" path="oe-core/bitbake"/>
+  <project remote="oe-core" revision="1.50" name="bitbake" path="oe-core/bitbake"/>
 
   <project remote="meta-sunxi" revision="hardknott" name="meta-sunxi" path="oe-core/meta-sunxi"/>
   <project remote="sla" revision="hardknott" name="meta-small-arm-extra" path="oe-core/meta-small-arm-extra"/>
