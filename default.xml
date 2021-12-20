@@ -5,14 +5,21 @@
 
   <remote fetch="https://github.com/openembedded" name="oe-core"/>
   <remote fetch="https://github.com/linux-sunxi" name="meta-sunxi"/>
+  <remote fetch="https://github.com/agherzan" name="agherzan"/>
   <remote fetch="https://github.com/sarnold" name="sla"/>
   <remote fetch="https://github.com/VCTLabs" name="vct"/>
+  <remote fetch="https://github.com/meta-qt5" name="meta-qt5"/>
+  <remote fetch="https://github.com/mendersoftware" name="mender"/>
 
   <project remote="oe-core" revision="dunfell" name="openembedded-core" path="oe-core"/>
   <project remote="oe-core" revision="dunfell" name="meta-openembedded" path="oe-core/meta-openembedded"/>
   <project remote="oe-core" revision="1.46" name="bitbake" path="oe-core/bitbake"/>
 
+  <project remote="agherzan" revision="dunfell" name="meta-raspberrypi" path="oe-core/meta-raspberrypi"/>
   <project remote="meta-sunxi" revision="dunfell" name="meta-sunxi" path="oe-core/meta-sunxi"/>
+  <project remote="mender" revision="dunfell" name="meta-mender" path="oe-core/meta-mender"/>
+  <project remote="mender" revision="dunfell" name="meta-mender-community" path="oe-core/meta-mender-community"/>
+  <project remote="meta-qt5" revision="dunfell" name="meta-qt5" path="oe-core/meta-qt5"/>
   <project remote="sla" revision="dunfell" name="meta-small-arm-extra" path="oe-core/meta-small-arm-extra"/>
 
 </manifest>

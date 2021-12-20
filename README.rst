@@ -85,9 +85,9 @@ Repo tips
 
 Some info on how to customize your sync:
 
-  ``-j JOBS, --jobs=JOBS``  projects to fetch simultaneously (default 4)
-  ``--no-clone-bundle``     disable use of /clone.bundle on HTTP/HTTPS
-  ``--no-tags``             don't fetch tags
+  | ``-j JOBS, --jobs=JOBS``  projects to fetch simultaneously (default 4)
+  | ``--no-clone-bundle``     disable use of /clone.bundle on HTTP/HTTPS
+  | ``--no-tags``             don't fetch tags
 
 Fastest full sync::
 
