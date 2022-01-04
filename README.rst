@@ -1,6 +1,6 @@
-=====================================
- VCT Allwinner arm32/64 BSP Manifest
-=====================================
+====================================================
+ VCT RaspberryPi, AllwinnerPi arm32/64 BSP Manifest
+====================================================
 
 The various branches available here will configure the repo build
 for the appropriate branches in each repository and clone them in the typical fashion,
@@ -16,8 +16,9 @@ machine variants
 
 Current machine variants on dunfell branch:
 
+* supported rpi devices (rpi/rpi2/rpi3/rpi0/rpi4/rpi-cm)
 * select orangepi, nanopi, bananapi devices
-* various a20 - a50 Allwinner-based devices
+* various a20 - a50 H3/H616 Allwinner-based devices
 * see `meta-sunxi/conf/machine`_ for default MACHINE names
 
 .. _meta-sunxi/conf/machine: https://github.com/linux-sunxi/meta-sunxi/tree/master/conf/machine
@@ -106,10 +107,29 @@ To start a simple image build for a specific target::
   $ cd oe-core
   $ source ./oe-init-build-env build-dir  # you choose name of build-dir
   $ ${EDITOR} conf/local.conf             # set MACHINE to <your_machine> (see above)
+  $ ${EDITOR} conf/bblayers.conf          # only use ONE BSP layer here (see example below)
   $ bitbake core-image-minimal
 
 In the above example, <your_machine> should be something like ``orange-pi-pc`` (an 
-Allwinner H3).
+Allwinner H3). Example ``bblayers.conf`` for an Allwinner pi board::
+
+  # LAYER_CONF_VERSION is increased each time build/conf/bblayers.conf
+  # changes incompatibly
+  LCONF_VERSION = "7"
+
+  BBPATH = "${TOPDIR}"
+  BBFILES ?= ""
+
+  OEROOT = "${HOME}/build/clonepi-bsp/oe-core"
+
+  BBLAYERS ?= " \
+    ${OEROOT}/meta \
+    ${OEROOT}/meta-small-arm-extra \
+    ${OEROOT}/meta-sunxi \
+    ${OEROOT}/meta-openembedded/meta-oe \
+    ${OEROOT}/meta-openembedded/meta-networking \
+    ${OEROOT}/meta-openembedded/meta-python \
+    "
 
 You can use any directory (build-dir above) to host your build. The above
 commands will build an image for <your_machine> using the BSP

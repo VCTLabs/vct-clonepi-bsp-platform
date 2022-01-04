@@ -6,6 +6,7 @@
   <remote fetch="https://github.com/openembedded" name="oe-core"/>
   <remote fetch="https://github.com/linux-sunxi" name="meta-sunxi"/>
   <remote fetch="https://github.com/agherzan" name="agherzan"/>
+  <remote fetch="https://github.com/myfreescalewebpage" name="mfsl"/>
   <remote fetch="https://github.com/sarnold" name="sla"/>
   <remote fetch="https://github.com/VCTLabs" name="vct"/>
   <remote fetch="https://github.com/meta-qt5" name="meta-qt5"/>
@@ -16,6 +17,7 @@
   <project remote="oe-core" revision="1.46" name="bitbake" path="oe-core/bitbake"/>
 
   <project remote="agherzan" revision="dunfell" name="meta-raspberrypi" path="oe-core/meta-raspberrypi"/>
+  <project remote="mfsl" revision="master" name="meta-chip" path="oe-core/meta-chip"/>
   <project remote="meta-sunxi" revision="dunfell" name="meta-sunxi" path="oe-core/meta-sunxi"/>
   <project remote="mender" revision="dunfell" name="meta-mender" path="oe-core/meta-mender"/>
   <project remote="mender" revision="dunfell" name="meta-mender-community" path="oe-core/meta-mender-community"/>
