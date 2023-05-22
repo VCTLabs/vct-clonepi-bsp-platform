@@ -14,7 +14,7 @@ DISTRO = "vctlabs" in your local.conf if you want the mainline kernel to be the 
 machine variants
 ----------------
 
-Current machine variants on dunfell branch:
+Current machine variants on kirkstone branch:
 
 * supported rpi devices (rpi/rpi2/rpi3/rpi0/rpi4/rpi-cm)
 * select orangepi, nanopi, bananapi devices
@@ -63,11 +63,11 @@ Create the BSP workspace
   $ PATH=${PATH}:~/bin
   $ mkdir clonepi-bsp
   $ cd clonepi-bsp
-  $ repo init -u https://github.com/VCTLabs/vct-clonepi-bsp-platform -b oe-dunfell
+  $ repo init -u https://github.com/VCTLabs/vct-clonepi-bsp-platform -b oe-kirkstone
   $ repo sync
 
 At the end of the above commands you have all the metadata you need to start
-building with poky and meta-oe on dunfell branches.
+building with poky and meta-oe on kirkstone branches.
 
 Update existing workspace
 -------------------------
@@ -96,7 +96,7 @@ Fastest full sync::
 
 Smallest/fastest sync::
 
-  $ repo init -u https://github.com/VCTLabs/vct-clonepi-bsp-platform -b oe-dunfell --no-clone-bundle --depth=1
+  $ repo init -u https://github.com/VCTLabs/vct-clonepi-bsp-platform -b oe-kirkstone --no-clone-bundle --depth=1
   $ repo sync --no-tags --no-clone-bundle --current-branch
 
 Configure and build

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <default sync-j="4" revision="oe-dunfell"/>
+  <default sync-j="4" revision="oe-kirkstone"/>
 
   <remote fetch="https://github.com/openembedded" name="oe-core"/>
   <remote fetch="https://github.com/linux-sunxi" name="meta-sunxi"/>
@@ -12,18 +12,18 @@
   <remote fetch="https://github.com/meta-qt5" name="meta-qt5"/>
   <remote fetch="https://github.com/mendersoftware" name="mender"/>
 
-  <project remote="oe-core" revision="dunfell" name="openembedded-core" path="oe-core"/>
-  <project remote="oe-core" revision="dunfell" name="meta-openembedded" path="oe-core/meta-openembedded"/>
-  <project remote="oe-core" revision="1.46" name="bitbake" path="oe-core/bitbake"/>
+  <project remote="oe-core" revision="kirkstone" name="openembedded-core" path="oe-core"/>
+  <project remote="oe-core" revision="kirkstone" name="meta-openembedded" path="oe-core/meta-openembedded"/>
+  <project remote="oe-core" revision="2.0.0" name="bitbake" path="oe-core/bitbake"/>
 
-  <project remote="agherzan" revision="dunfell" name="meta-raspberrypi" path="oe-core/meta-raspberrypi"/>
+  <project remote="agherzan" revision="kirkstone" name="meta-raspberrypi" path="oe-core/meta-raspberrypi"/>
   <project remote="mfsl" revision="master" name="meta-chip" path="oe-core/meta-chip"/>
-  <project remote="meta-sunxi" revision="dunfell" name="meta-sunxi" path="oe-core/meta-sunxi"/>
-  <project remote="mender" revision="dunfell" name="meta-mender" path="oe-core/meta-mender"/>
-  <project remote="mender" revision="dunfell" name="meta-mender-community" path="oe-core/meta-mender-community"/>
-  <project remote="meta-qt5" revision="dunfell" name="meta-qt5" path="oe-core/meta-qt5"/>
-  <project remote="vct" revision="dunfell" name="meta-lxde" path="oe-core/meta-lxde"/>
-  <project remote="sla" revision="dunfell" name="meta-small-arm-extra" path="oe-core/meta-small-arm-extra"/>
+  <project remote="meta-sunxi" revision="kirkstone" name="meta-sunxi" path="oe-core/meta-sunxi"/>
+  <project remote="mender" revision="kirkstone" name="meta-mender" path="oe-core/meta-mender"/>
+  <project remote="mender" revision="kirkstone" name="meta-mender-community" path="oe-core/meta-mender-community"/>
+  <project remote="meta-qt5" revision="kirkstone" name="meta-qt5" path="oe-core/meta-qt5"/>
+  <project remote="vct" revision="kirkstone" name="meta-lxde" path="oe-core/meta-lxde"/>
+  <project remote="sla" revision="kirkstone" name="meta-small-arm-extra" path="oe-core/meta-small-arm-extra"/>
 
 </manifest>
 
