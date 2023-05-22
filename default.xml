@@ -22,6 +22,7 @@
   <project remote="mender" revision="dunfell" name="meta-mender" path="oe-core/meta-mender"/>
   <project remote="mender" revision="dunfell" name="meta-mender-community" path="oe-core/meta-mender-community"/>
   <project remote="meta-qt5" revision="dunfell" name="meta-qt5" path="oe-core/meta-qt5"/>
+  <project remote="vct" revision="dunfell" name="meta-lxde" path="oe-core/meta-lxde"/>
   <project remote="sla" revision="dunfell" name="meta-small-arm-extra" path="oe-core/meta-small-arm-extra"/>
 
 </manifest>
