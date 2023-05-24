@@ -14,7 +14,7 @@
 
   <project remote="oe-core" revision="kirkstone" name="openembedded-core" path="oe-core"/>
   <project remote="oe-core" revision="kirkstone" name="meta-openembedded" path="oe-core/meta-openembedded"/>
-  <project remote="oe-core" revision="2.0.0" name="bitbake" path="oe-core/bitbake"/>
+  <project remote="oe-core" revision="2.0" name="bitbake" path="oe-core/bitbake"/>
 
   <project remote="agherzan" revision="kirkstone" name="meta-raspberrypi" path="oe-core/meta-raspberrypi"/>
   <project remote="mfsl" revision="master" name="meta-chip" path="oe-core/meta-chip"/>
