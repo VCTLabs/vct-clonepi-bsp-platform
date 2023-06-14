@@ -1,6 +1,6 @@
-=====================================
- VCT Allwinner arm32/64 BSP Manifest
-=====================================
+====================================================
+ VCT RaspberryPi, AllwinnerPi arm32/64 BSP Manifest
+====================================================
 
 The various branches available here will configure the repo build
 for the appropriate branches in each repository and clone them in the typical fashion,
@@ -16,8 +16,9 @@ machine variants
 
 Current machine variants on dunfell branch:
 
+* supported rpi devices - rpi/rpi2/rpi3/rpi0/rpi0-w/rpi4/rpi-cm, rpi0-w+phat-dac
 * select orangepi, nanopi, bananapi devices
-* various a20 - a50 Allwinner-based devices
+* various a20 - a50 H3/H616 Allwinner-based devices
 * see `meta-sunxi/conf/machine`_ for default MACHINE names
 
 .. _meta-sunxi/conf/machine: https://github.com/linux-sunxi/meta-sunxi/tree/master/conf/machine
@@ -54,29 +55,83 @@ Install the repo utility
   $ curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
   $ chmod a+x ~/bin/repo
 
-Download the BSP source
------------------------
+Create the BSP workspace
+------------------------
 
 ::
 
   $ PATH=${PATH}:~/bin
   $ mkdir clonepi-bsp
   $ cd clonepi-bsp
-  $ repo init -u https://github.com/VCTLabs/vct-clonepi-bsp-platform -b oe-dunfell
+  $ repo init -u https://github.com/VCTLabs/vct-clonepi-bsp-platform -b poky-dunfell
   $ repo sync
 
 At the end of the above commands you have all the metadata you need to start
 building with poky and meta-oe on dunfell branches.
+
+Update existing workspace
+-------------------------
+
+In order to bring all the repositories up to date with upstream::
+
+  $ cd clonepi-bsp
+  $ repo sync
+
+If you have local changes, you might also need::
+
+  $ repo rebase
+
+Repo tips
+---------
+
+Some info on how to customize your sync:
+
+  | ``-j JOBS, --jobs=JOBS``  projects to fetch simultaneously (default 4)
+  | ``--no-clone-bundle``     disable use of /clone.bundle on HTTP/HTTPS
+  | ``--no-tags``             don't fetch tags
+
+Fastest full sync::
+
+  $ repo sync --no-tags --no-clone-bundle
+
+Smallest/fastest sync::
+
+  $ repo init -u https://github.com/VCTLabs/vct-clonepi-bsp-platform -b poky-dunfell --no-clone-bundle --depth=1
+  $ repo sync --no-tags --no-clone-bundle --current-branch
+
+Configure and build
+-------------------
 
 To start a simple image build for a specific target::
 
   $ cd oe-core
   $ source ./oe-init-build-env build-dir  # you choose name of build-dir
   $ ${EDITOR} conf/local.conf             # set MACHINE to <your_machine> (see above)
+  $ ${EDITOR} conf/bblayers.conf          # only use ONE BSP layer here (see example below)
   $ bitbake core-image-minimal
 
 In the above example, <your_machine> should be something like ``orange-pi-pc`` (an 
-Allwinner H3).
+Allwinner H3). Example ``bblayers.conf`` for an Allwinner pi board::
+
+  # LAYER_CONF_VERSION is increased each time build/conf/bblayers.conf
+  # changes incompatibly
+  LCONF_VERSION = "7"
+
+  BBPATH = "${TOPDIR}"
+  BBFILES ?= ""
+
+  BSPDIR = "${HOME}/clonepi-bsp-test"
+
+  BBLAYERS ?= " \
+    ${BSPDIR}/poky/meta \
+    ${BSPDIR}/poky/meta-poky \
+    ${BSPDIR}/poky/meta-yocto-bsp \
+    ${BSPDIR}/poky/meta-sunxi \
+    ${BSPDIR}/poky/meta-small-arm-extra \
+    ${BSPDIR}/poky/meta-openembedded/meta-oe \
+    ${BSPDIR}/poky/meta-openembedded/meta-networking \
+    ${BSPDIR}/poky/meta-openembedded/meta-python \
+  "
 
 You can use any directory (build-dir above) to host your build. The above
 commands will build an image for <your_machine> using the BSP
@@ -98,11 +153,11 @@ Using Development and Testing/Release Branches
 
 Replace the repo init command above with one of the following:
 
-For developers - gatesgarth
+For developers - hardknott
 
 ::
 
-  $ repo init -u https://github.com/VCTLabs/vct-clonepi-bsp-platform -b oe-gatesgarth
+  $ repo init -u https://github.com/VCTLabs/vct-clonepi-bsp-platform -b oe-hardknott
 
 For intrepid developers and testers - master
 
