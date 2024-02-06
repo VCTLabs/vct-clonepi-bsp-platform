@@ -27,7 +27,7 @@
   <project remote="vct" revision="mickledore" name="meta-lxde" path="poky/meta-lxde"/>
   <project remote="sla" revision="mickledore" name="meta-small-arm-extra" path="poky/meta-small-arm-extra"/>
   <project remote="swupdate" revision="mickledore" name="meta-swupdate" path="poky/meta-swupdate"/>
-  <project remote="swupdate" revision="mickledore" name="meta-swupdate-boards" path="poky/meta-swupdate-boards"/>
+  <project remote="swupdate" revision="master" name="meta-swupdate-boards" path="poky/meta-swupdate-boards"/>
 
 </manifest>
 
