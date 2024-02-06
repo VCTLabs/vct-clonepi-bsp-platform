@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <default sync-j="4" revision="poky-mickledore"/>
+
+  <remote fetch="https://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="https://github.com/openembedded" name="oe"/>
+  
+  <remote fetch="https://github.com/linux-sunxi" name="meta-sunxi"/>
+  <remote fetch="https://github.com/agherzan" name="agherzan"/>
+  <remote fetch="https://github.com/myfreescalewebpage" name="mfsl"/>
+  <remote fetch="https://github.com/sbabic" name="swupdate"/>
+  <remote fetch="https://github.com/sarnold" name="sla"/>
+  <remote fetch="https://github.com/VCTLabs" name="vct"/>
+  <remote fetch="https://github.com/spietika" name="dac"/>
+  <remote fetch="https://github.com/meta-qt5" name="meta-qt5"/>
+
+  <project remote="yocto" revision="mickledore" name="poky" path="poky"/>
+  <project remote="oe" revision="mickledore" name="meta-openembedded" path="poky/meta-openembedded"/>
+
+  <project remote="agherzan" revision="mickledore" name="meta-raspberrypi" path="poky/meta-raspberrypi"/>
+  <project remote="dac" revision="master" name="meta-rpi-bt-dac" path="poky/meta-rpi-bt-dac"/>
+  <project remote="mfsl" revision="master" name="meta-chip" path="poky/meta-chip"/>
+  <project remote="meta-sunxi" revision="mickledore" name="meta-sunxi" path="poky/meta-sunxi"/>
+  <project remote="meta-qt5" revision="mickledore" name="meta-qt5" path="poky/meta-qt5"/>
+  <project remote="vct" revision="mickledore" name="meta-meson" path="poky/meta-meson"/>
+  <project remote="vct" revision="mickledore" name="meta-lxde" path="poky/meta-lxde"/>
+  <project remote="sla" revision="mickledore" name="meta-small-arm-extra" path="poky/meta-small-arm-extra"/>
+  <project remote="swupdate" revision="mickledore" name="meta-swupdate" path="poky/meta-swupdate"/>
+  <project remote="swupdate" revision="mickledore" name="meta-swupdate-boards" path="poky/meta-swupdate-boards"/>
+
+</manifest>
+
