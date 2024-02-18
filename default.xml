@@ -26,7 +26,7 @@
   <project remote="vct" revision="dunfell" name="meta-meson" path="poky/meta-meson"/>
   <project remote="vct" revision="dunfell" name="meta-lxde" path="poky/meta-lxde"/>
   <project remote="sla" revision="dunfell" name="meta-small-arm-extra" path="poky/meta-small-arm-extra"/>
-  <project remote="vct" revision="dunfell" name="meta-security" path="poky/meta-security"/>
+  <project remote="yocto" revision="dunfell" name="meta-security" path="poky/meta-security"/>
   <project remote="vct" revision="dunfell" name="meta-security-backports" path="poky/meta-security-backports"/>
   <project remote="swupdate" revision="dunfell" name="meta-swupdate" path="poky/meta-swupdate"/>
   <project remote="swupdate" revision="dunfell" name="meta-swupdate-boards" path="poky/meta-swupdate-boards"/>
